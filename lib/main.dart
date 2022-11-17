@@ -1,5 +1,6 @@
-import 'package:lab_pbp/form.dart';
+import 'package:lab_pbp/page/form.dart';
 import 'package:flutter/material.dart';
+import 'package:lab_pbp/page/to_do_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -69,10 +70,21 @@ class _MyHomePageState extends State<MyHomePage> {
                 );
               },
             ),
+            ListTile(
+              title: const Text('To Do'),
+              onTap: () {
+                // Route menu ke halaman to do
+                Navigator.pushReplacement(
+                  context,
+                  MaterialPageRoute(builder: (context) => const ToDoPage()),
+                );
+              },
+            ),
           ],
         ),
       ),
-      body: Center(  child: Column(
+      body: Center(
+        child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             const Text(
